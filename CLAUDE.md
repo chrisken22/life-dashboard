@@ -41,3 +41,7 @@ life-dashboard/
 - Use UTC+1 timezone for any dates/times
 - User works locally at home, uses web (claude.ai/code) at work
 - When changing sync behavior, update this file and `docs/sync-workflow.md`
+- **When updating any synced file**, add at the bottom: `Last updated: [DD/MM/YYYY HH:MM] from [local/web]`
+
+---
+Last updated: 04/02/2026 00:45 from local
