@@ -365,20 +365,27 @@ life-dashboard/
 ├── backend/
 │   ├── app/
 │   │   ├── main.py              # FastAPI entry point
-│   │   ├── models/              # Database models
+│   │   ├── database.py          # SQLite setup
+│   │   ├── models/              # SQLAlchemy models
 │   │   ├── routers/             # API routes
-│   │   ├── services/            # Business logic
-│   │   └── ai/                  # AI provider abstraction
+│   │   │   ├── tasks.py
+│   │   │   └── todos.py
+│   │   └── services/            # Business logic
 │   ├── requirements.txt
-│   └── Dockerfile
+│   └── compass.db               # SQLite database (gitignored)
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
+│   │   │   ├── CommandPalette.jsx
+│   │   │   ├── KanbanBoard.jsx
+│   │   │   ├── TodoList.jsx
+│   │   │   └── Dashboard.jsx
 │   │   ├── pages/
-│   │   └── services/
+│   │   ├── services/            # API client
+│   │   └── App.jsx
 │   ├── package.json
-│   └── Dockerfile
-├── docker-compose.yml
+│   └── tailwind.config.js
+├── .gitignore
 └── README.md
 ```
 
