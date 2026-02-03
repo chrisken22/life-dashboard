@@ -309,11 +309,48 @@ Phase 1 is complete when you can:
 
 ---
 
-## Open Questions (Future Phases)
+## Open Questions (To Discuss)
 
 1. **AI persona:** Should the coach have a name/character?
 2. **Data privacy:** Anonymization strategy for diary imports?
 3. **Mobile:** PWA or native app eventually?
+
+---
+
+## Ideas Backlog (Unassigned)
+
+*New ideas go here first, then get assigned to phases during planning sessions*
+
+| Idea | Source | Notes |
+|------|--------|-------|
+| *(empty - add ideas here)* | | |
+
+---
+
+## Change Log
+
+| Date | Change | Impact |
+|------|--------|--------|
+| 2026-02-04 | Initial plan created | - |
+
+---
+
+## How We Manage This Plan
+
+### Adding New Ideas
+1. New idea comes up → Add to "Ideas Backlog" section
+2. During planning sessions → Assign to appropriate phase or keep in backlog
+3. Ideas can span multiple phases (e.g., "brain map" touches Phase 2, 3, and 6)
+
+### Changing Completed Phases
+- **Small changes:** Just modify the code, update the plan to reflect reality
+- **Medium changes:** Discuss trade-offs first, then implement
+- **Big architectural changes:** May require refactoring - we assess cost/benefit together
+
+### Version Control Strategy
+- Plan changes get noted in Change Log
+- Code changes get proper git commits
+- If we need to "undo" a phase, git history helps
 
 ---
 
