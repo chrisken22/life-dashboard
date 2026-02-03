@@ -34,7 +34,7 @@ Location: `git-auto-sync.bat`
 1. Fetches remote branches
 2. Finds latest `claude/*` branch
 3. Pulls changes from it (if any)
-4. Pushes local `docs/` changes to `master`
+4. Pushes local changes to `master` (only `docs/` and `CLAUDE.md`)
 5. Repeats every 60 seconds
 
 **To start:** Double-click `Life-Dashboard-Sync.bat` on Desktop

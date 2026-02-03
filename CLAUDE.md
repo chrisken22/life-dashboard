@@ -27,16 +27,17 @@ life-dashboard/
 - **Local** pushes to `master` branch
 - **Web** pushes to `claude/*` branches
 - Auto-sync script runs every 1 minute, pulls from `claude/*`
+- **Auto-synced:** `docs/` folder and `CLAUDE.md`
+- **Not synced:** code files (manual push only)
 - See `docs/sync-workflow.md` for details
 
 ## Conventions
 
 - Docs go in `docs/` folder
-- Code stays local (not synced via auto-sync)
-- Commit messages: descriptive for manual, "Auto-sync docs [date]" for auto
+- Commit messages: descriptive for manual, "Auto-sync [date]" for auto
 
 ## Notes for Claude
 
-- When working on this project, use UTC+1 timezone for any dates/times
+- Use UTC+1 timezone for any dates/times
 - User works locally at home, uses web (claude.ai/code) at work
-- Only `docs/` folder is auto-synced; code changes need manual push
+- When changing sync behavior, update this file and `docs/sync-workflow.md`
