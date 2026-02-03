@@ -467,6 +467,13 @@ Phase 1 is complete when you can:
 
 ## Open Questions (To Discuss)
 
+### Next Planning Session - Pick Up Here:
+- [ ] **Review original notes** - Check if we missed any of your initial ideas
+- [ ] **Technical details** - Database design, API structure, component breakdown
+- [ ] **AI coach specifics** - How the challenging personality should work
+- [ ] **Phase priorities** - Should any phases be reordered or combined?
+
+### Longer-term Questions:
 1. **AI persona:** Should the coach have a name/character?
 2. **Data privacy:** Anonymization strategy for diary imports?
 3. **Mobile:** PWA or native app eventually?
@@ -488,6 +495,7 @@ Phase 1 is complete when you can:
 | Date | Change | Impact |
 |------|--------|--------|
 | 2026-02-04 | Initial plan created | - |
+| 2026-02-04 | Added user context, dashboard layout, detailed phase features | Major update |
 
 ---
 
