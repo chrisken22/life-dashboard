@@ -16,20 +16,33 @@ Personal life dashboard project synced between local (Windows) and web (claude.a
 ```
 life-dashboard/
 ├── CLAUDE.md           # This file - project context for Claude
-├── docs/               # Documentation (synced between local & web)
+├── docs/               # Documentation
+│   ├── PROJECT_PLAN         # Main plan file (LOCAL ONLY edits)
+│   ├── web-updates.md  # Web suggestions (WEB creates, LOCAL merges)
 │   └── sync-workflow.md
 ├── git-auto-sync.bat   # Auto-sync script (local only)
 └── ... (code files)
 ```
 
-## Sync Setup
+## Sync Rules
 
-- **Local** pushes to `master` branch
-- **Web** pushes to `claude/*` branches
-- Auto-sync script runs every 1 minute, pulls from `claude/*`
-- **Auto-synced:** `docs/` folder and `CLAUDE.md`
-- **Not synced:** code files (manual push only)
-- See `docs/sync-workflow.md` for details
+### Who edits what:
+| File | Local | Web |
+|------|-------|-----|
+| `docs/PROJECT_PLAN` | ✅ Edit | ❌ Read only |
+| `docs/web-updates.md` | ❌ Merge only | ✅ Create/Edit |
+| `CLAUDE.md` | ✅ Edit | ✅ Edit |
+| Other docs | ✅ Edit | ✅ Edit |
+
+### Workflow:
+1. **Web** wants to update the plan → creates/updates `docs/web-updates.md` with suggestions
+2. **Local** reviews and merges suggestions into `docs/PROJECT_PLAN`
+3. **Local** clears `docs/web-updates.md` after merging
+
+### Auto-sync script:
+- **PULL:** from web (`claude/*` branches)
+- **PUSH:** `docs/` and `CLAUDE.md` to `master`
+- Runs every 1 minute
 
 ## Conventions
 
@@ -42,6 +55,7 @@ life-dashboard/
 - User works locally at home, uses web (claude.ai/code) at work
 - When changing sync behavior, update this file and `docs/sync-workflow.md`
 - **When updating any synced file**, add at the bottom: `Last updated: [DD/MM/YYYY HH:MM] from [local/web]`
+- **Web Claude:** Do NOT edit `docs/PROJECT_PLAN` directly. Put suggestions in `docs/web-updates.md`
 
 ---
-Last updated: 04/02/2026 00:45 from local
+Last updated: 04/02/2026 01:00 from local
