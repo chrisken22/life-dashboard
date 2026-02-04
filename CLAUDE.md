@@ -75,5 +75,21 @@ These files must **never** be edited from web. They are the source of truth.
 - **Web Claude:** Do NOT edit core documents (`CLAUDE.md`, `PROJECT_PLAN.md`, `sync-workflow.md`). Write suggestions into `docs/web_brainstorm.md`. If creating a new file, prefix it with `web_`.
 - **Session note:** `CLAUDE.md` is read at session start only. If it changes while a session is open (e.g. updated from web or another local edit), start a new session to pick up the changes.
 
+## Documentation Rules
+
+When something happens during development, log it in the right place:
+
+| Situation | Action |
+|-----------|--------|
+| Made an architectural choice | Add to `docs/decision-log.md` |
+| Learned something the hard way | Add to `docs/lessons-learned.md` |
+| Fixed a tricky bug | Add to `docs/troubleshooting.md` |
+| Have ideas for the plan | Web: `docs/web_brainstorm.md` / Local: edit `PROJECT_PLAN.md` directly |
+| Code review after feature/phase | Look for skill candidates, update docs as above |
+
+### Code Reviews
+- **When:** After each phase completion + ad-hoc as needed
+- **Purpose:** Identify repeating patterns for skills, capture lessons learned, update docs
+
 ---
-Last updated: 04/02/2026 14:30 from local
+Last updated: 04/02/2026 22:30 from local

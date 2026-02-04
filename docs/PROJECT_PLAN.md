@@ -438,6 +438,74 @@ Phase 1 is complete when you can:
 
 ---
 
+## Developer Tooling & Workflow
+
+How we build — skills, docs, agents, and code reviews. These evolve as the project grows.
+
+---
+
+### Skills
+
+Skills are reusable instruction files in `.claude/skills/` that teach Claude project-specific patterns.
+
+**Principle:** Don't create skills upfront. Create them as patterns emerge from actual code.
+
+**Workflow:**
+1. Build a feature
+2. Run a code review session
+3. Identify repeating patterns or conventions
+4. Create a skill if the pattern will be reused
+
+**Guidelines:**
+- Flat structure: `.claude/skills/skill-name.md`
+- Start broad, split when too long
+- Include brief "why" (rationale), not just "how" (steps)
+
+**Potential categories (create when relevant):**
+- Backend: endpoint patterns, DB migrations
+- Frontend: components, dark theme, command palette
+- AI: prompts, provider setup, coach tone
+- Features: widgets, feeds, alerts, notifications
+
+---
+
+### Documentation
+
+**Primary docs** (live in `docs/`):
+
+| Doc | Purpose |
+|-----|---------|
+| `decision-log.md` | Why we chose X over Y — architectural choices, tech decisions |
+| `lessons-learned.md` | What worked, what didn't — insights from experience |
+| `troubleshooting.md` | Common problems + solutions — save future debugging time |
+
+**Optional docs** (create when needed):
+
+| Doc | Purpose | Create when... |
+|-----|---------|----------------|
+| `issue-log.md` | Track bugs/problems during dev | If not using GitHub Issues |
+| `changelog.md` | Version history | If Change Log in PROJECT_PLAN grows too large |
+| `quick-reference.md` | Cheat sheet for commands | Once there are recurring commands to remember |
+
+Rules for when to log what are in `CLAUDE.md → Documentation Rules`.
+
+---
+
+### Agents
+
+Agents are autonomous subprocesses for complex, multi-step tasks. Built progressively — start simple, add complexity as patterns emerge. Skills teach patterns; agents apply them.
+
+**Planned agents:**
+
+| Agent | Purpose | Build when |
+|-------|---------|------------|
+| `quick-scaffold` | Creates feature plans/skeleton files following established patterns | Now (learning) or after Phase 1 (actual scaffolding) |
+| `code-reviewer` | Reviews code, checks patterns, identifies skill candidates, updates docs | After Phase 1 |
+| `dashboard-feature` | End-to-end feature creation: DB → API → widget → tests | After Phase 1 |
+| `feed-curator` | Manages content feeds: setup, review, tuning, debug | Phase 4 (when feeds exist) |
+
+---
+
 ## Decisions Made
 
 | Decision | Choice |
