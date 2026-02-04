@@ -15,29 +15,46 @@ Personal life dashboard project synced between local (Windows) and web (claude.a
 
 ```
 life-dashboard/
-├── CLAUDE.md           # This file - project context for Claude
+├── CLAUDE.md              # This file - project context (LOCAL ONLY edits)
 ├── docs/               # Documentation
-│   ├── PROJECT_PLAN         # Main plan file (LOCAL ONLY edits)
-│   ├── web-updates.md  # Web suggestions (WEB creates, LOCAL merges)
-│   └── sync-workflow.md
+│   ├── PROJECT_PLAN.md    # Main plan file (LOCAL ONLY edits)
+│   ├── web_brainstorm.md  # Web suggestions (WEB creates, LOCAL merges + archives)
+│   └── sync-workflow.md   # Sync docs (LOCAL ONLY edits)
 ├── git-auto-sync.bat   # Auto-sync script (local only)
 └── ... (code files)
 ```
 
 ## Sync Rules
 
+### Core documents — LOCAL only:
+These files must **never** be edited from web. They are the source of truth.
+
+| File | Reason |
+|------|--------|
+| `CLAUDE.md` | Project context — changes here affect all sessions |
+| `docs/PROJECT_PLAN.md` | Main plan — merges happen here locally after review |
+| `docs/sync-workflow.md` | Sync rules themselves |
+
 ### Who edits what:
 | File | Local | Web |
 |------|-------|-----|
-| `docs/PROJECT_PLAN` | ✅ Edit | ❌ Read only |
-| `docs/web-updates.md` | ❌ Merge only | ✅ Create/Edit |
-| `CLAUDE.md` | ✅ Edit | ✅ Edit |
-| Other docs | ✅ Edit | ✅ Edit |
+| `CLAUDE.md` | ✅ Edit | ❌ Read only |
+| `docs/PROJECT_PLAN.md` | ✅ Edit | ❌ Read only |
+| `docs/sync-workflow.md` | ✅ Edit | ❌ Read only |
+| `docs/web_brainstorm.md` | ✅ Merge + archive | ✅ Create/Edit |
+| New files (web-created) | ✅ Edit | ✅ Create (prefix with `web_`) |
+
+### Web file naming convention:
+- Any file **created by web** gets a `web_` prefix: e.g. `web_brainstorm.md`, `web_notes.md`
+- This makes it clear at a glance what originated from web and what local owns
+- Local can rename or move `web_` files after reviewing
 
 ### Workflow:
-1. **Web** wants to update the plan → creates/updates `docs/web-updates.md` with suggestions
-2. **Local** reviews and merges suggestions into `docs/PROJECT_PLAN`
-3. **Local** clears `docs/web-updates.md` after merging
+1. **Web** wants to suggest changes → writes into `docs/web_brainstorm.md`
+2. **Web** needs a new file → creates it with `web_` prefix in `docs/`
+3. **Local** reviews `web_` files, merges relevant parts into core docs
+4. **Local** moves merged items from `web_brainstorm.md` to `docs/web_brainstorm_archive.md` (append-only)
+5. **Local** cleans up `web_brainstorm.md` (remove archived items, keep only active ones)
 
 ### Auto-sync script:
 - **PULL:** from web (`claude/*` branches)
