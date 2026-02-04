@@ -80,6 +80,61 @@
 
 ---
 
+### Agents Strategy (04/02/2026)
+
+**Context:** Agents are autonomous subprocesses for complex, multi-step tasks. Useful when tasks require multiple tool calls, decision-making, or specialized context.
+
+**Planned Agents:**
+
+#### 1. `quick-scaffold` (Learning / Simple)
+**Purpose:** Simple agent to learn how agents work.
+**What it does:**
+- Before codebase exists: Creates a feature plan/spec (what files, endpoints, components needed)
+- After Phase 1: Creates actual skeleton files following established patterns
+**When to use:** Starting a new feature, learning agent patterns
+**Build when:** Now (for learning) or after Phase 1 (for actual scaffolding)
+
+#### 2. `code-reviewer`
+**Purpose:** Reviews code, suggests improvements, identifies skill candidates.
+**What it does:**
+- Reviews changed files or specified paths
+- Checks against established patterns
+- Identifies code smells, inconsistencies, missing tests
+- Suggests skills for repeating patterns
+- Optionally updates docs (lessons-learned, troubleshooting)
+**When to use:** After each phase, ad-hoc code reviews
+**Build when:** After Phase 1 (need code to review)
+
+#### 3. `dashboard-feature`
+**Purpose:** End-to-end feature creation from idea to working widget.
+**What it does:**
+- Takes a feature idea (e.g., "show mood history on dashboard")
+- Analyzes data needs
+- Creates backend: DB model, API endpoint, tests
+- Creates frontend: widget component with privacy mode support
+- Registers widget in dashboard layout
+- Runs tests and reports status
+**When to use:** Adding new dashboard features
+**Build when:** After Phase 1 (need established patterns)
+
+#### 4. `feed-curator`
+**Purpose:** Manages content feeds - setup, review, and tuning.
+**What it does:**
+- Add sources: Configure new Twitter accounts, RSS feeds, etc.
+- Review feeds: Summarize fetched content, highlight important items
+- Tune relevance: Adjust AI filtering based on feedback
+- Debug: Check why sources aren't working
+**Note:** The actual fetching runs as a background Python service (systemd). This agent helps configure and review it.
+**When to use:** Managing content aggregation
+**Build when:** Phase 4 (when feeds feature exists)
+
+**Agent Guidelines:**
+- Build agents as patterns emerge, not upfront
+- Start simple (`quick-scaffold`), add complexity as needed
+- Agents complement skills - skills teach patterns, agents apply them
+
+---
+
 ## Questions to Resolve
 
 *(Open questions that need answers before merging)*
@@ -92,4 +147,4 @@
 
 ---
 
-Last updated: 04/02/2026 09:45 from web
+Last updated: 04/02/2026 10:15 from web
