@@ -564,6 +564,7 @@ Agents are autonomous subprocesses for complex, multi-step tasks. Built progress
 |------|--------|--------|
 | 2026-02-04 | Initial plan created | - |
 | 2026-02-04 | Added user context, dashboard layout, detailed phase features | Major update |
+| 2026-02-04 | Merged brainstorm: Skills, Docs, Agents strategies → new "Developer Tooling & Workflow" section | Added tooling section, created 3 doc files, updated CLAUDE.md |
 
 ---
 
