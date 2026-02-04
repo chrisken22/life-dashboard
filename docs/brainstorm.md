@@ -40,6 +40,46 @@
 
 ---
 
+### Documentation Strategy (04/02/2026)
+
+**Context:** Need structured docs beyond CLAUDE.md and PROJECT_PLAN to capture different types of information.
+
+**Primary Docs (create now):**
+
+| Doc | Purpose |
+|-----|---------|
+| `docs/decision-log.md` | Why we chose X over Y - architectural choices, tech decisions |
+| `docs/lessons-learned.md` | What worked, what didn't - insights from experience |
+| `docs/troubleshooting.md` | Common problems + solutions - save future debugging time |
+
+**Optional Docs (create when needed):**
+
+| Doc | Purpose | Create when... |
+|-----|---------|----------------|
+| `docs/issue-log.md` | Track bugs/problems during dev | If not using GitHub Issues |
+| `docs/changelog.md` | Version history | If Change Log in PROJECT_PLAN grows too large |
+| `docs/quick-reference.md` | Cheat sheet for commands | Once there are recurring commands to remember |
+
+**Rules for CLAUDE.md (add when merging):**
+
+```markdown
+## Documentation Rules
+
+| Situation | Action |
+|-----------|--------|
+| Made an architectural choice | Add to `docs/decision-log.md` |
+| Learned something the hard way | Add to `docs/lessons-learned.md` |
+| Fixed a tricky bug | Add to `docs/troubleshooting.md` |
+| Have ideas for the plan | Web: `docs/brainstorm.md` / Local: edit `PROJECT_PLAN.md` directly |
+| Code review after feature/phase | Look for skill candidates, update docs |
+```
+
+**Code Review Sessions (add to CLAUDE.md):**
+- Frequency: After each phase completion + ad-hoc as needed
+- Purpose: Identify patterns for skills, update documentation, capture lessons learned
+
+---
+
 ## Questions to Resolve
 
 *(Open questions that need answers before merging)*
@@ -52,4 +92,4 @@
 
 ---
 
-Last updated: 04/02/2026 09:15 from web
+Last updated: 04/02/2026 09:45 from web
