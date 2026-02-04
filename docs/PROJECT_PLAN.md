@@ -224,10 +224,28 @@ CREATE TABLE note_links (
   - Pokes holes in trading/investment thesis
   - Configurable intensity
 - [ ] **Life Coach with memory**
-  - Challenging/direct tone (default)
+  - **Tone: "Drill Sergeant + Motivational Speaker"** — direct, no BS, but believes in you. Never coddles. Motivational kick lands at the right moments (after wins, when you're down, when you need a push).
+  - Tone is **fully automatic** — context-driven, no manual toggle needed
   - Learns patterns from notes/mood (selective access - you control what it sees)
   - Asks follow-up questions when you have time
   - Gives bold, actionable suggestions
+
+**Coach Tone Logic (automatic):**
+
+| Context | Tone behavior | Example |
+|---------|---------------|---------|
+| Overdue / postponed task | Blunt call-out, demands a decision | "Third time this moved. Do it or cut it. You're better than this." |
+| Big deadline today | Direct prep check, then motivational | "Big day. Prep status — right now. Name what could go wrong, then we crush it." |
+| Low mood logged | Direct but acknowledges, no jokes | "3 out of 10. That's rough — don't skip this. You've handled worse before." |
+| Task completed / streak | Short praise, then pushes forward | "4 done. That's discipline. What's next?" |
+| Routine check-in | Firm but casual | "What are you focusing on today? No fluff." |
+| Old todo sitting idle | Blunt, slight edge | "3 days. 20 pages. Pick it up tonight — you've got this, now prove it." |
+
+**Tone never does:**
+- Apologizes or softens for no reason
+- Gives empty praise ("Great job!" with no follow-up)
+- Ignores low mood with humor
+- Asks the same question twice
 - [ ] **Flexible mood check-ins**
   - Quick: 1-click emoji mood capture
   - Expanded: AI asks follow-up questions (optional)
@@ -516,7 +534,7 @@ Agents are autonomous subprocesses for complex, multi-step tasks. Built progress
 |----------|--------|
 | **App Name** | Compass |
 | **Design** | Minimal dark theme |
-| **AI Coach Tone** | Challenging/direct |
+| **AI Coach Tone** | Drill Sergeant + Motivational Speaker. Direct, no BS, believes in you. Fully automatic — context-driven tone switching. |
 | **Tech Stack** | FastAPI + React + SQLite |
 | **AI Providers** | Cloud APIs (OpenAI/Claude) - VPS storage too limited for local models |
 | **Hosting** | Local first → VPS later (Debian, no Docker initially) |
@@ -548,7 +566,7 @@ Agents are autonomous subprocesses for complex, multi-step tasks. Built progress
 ### Next Planning Session - Pick Up Here:
 - [ ] **Review original notes** - Check if we missed any of your initial ideas
 - [x] **Technical details** - Database design, API structure, component breakdown *(resolved 04/02/2026)*
-- [ ] **AI coach specifics** - How the challenging personality should work
+- [x] **AI coach specifics** - How the challenging personality should work *(resolved 04/02/2026)*
 - [ ] **Phase priorities** - Should any phases be reordered or combined?
 
 ### Longer-term Questions:
@@ -575,6 +593,7 @@ Agents are autonomous subprocesses for complex, multi-step tasks. Built progress
 | 2026-02-04 | Initial plan created | - |
 | 2026-02-04 | Added user context, dashboard layout, detailed phase features | Major update |
 | 2026-02-04 | Merged brainstorm: Skills, Docs, Agents strategies → new "Developer Tooling & Workflow" section | Added tooling section, created 3 doc files, updated CLAUDE.md |
+| 2026-02-04 | Defined AI coach tone + logic: Drill Sergeant + Motivational Speaker, fully automatic context-driven | Updated Phase 3 spec, Decisions Made |
 
 ---
 
