@@ -77,15 +77,19 @@
 |-------|------------|-----------|
 | **Backend** | FastAPI (Python) | You know Python, great for AI integrations, async support |
 | **Frontend** | React + Tailwind CSS | Modern, component-based, great ecosystem |
-| **Database** | SQLite | Simple, no separate server needed, easy backup |
+| **State (client)** | React Query + useState | React Query for server data (fetch, cache, poll). useState for UI state. No global store needed. |
+| **Search** | Fuse.js (client-side) | Instant search in command palette. Data fetched upfront, searched in browser. Zero latency. |
+| **Drag & Drop** | React Beautiful DnD | Battle-tested (Atlassian), smooth animations, good docs. Used for Kanban board. |
+| **Database** | SQLite + SQLAlchemy ORM | SQLite for simplicity. SQLAlchemy defines models as Python classes, handles queries + migrations (Alembic). |
 | **AI Layer** | LiteLLM | Unified API for OpenAI/Claude (cloud APIs due to VPS storage limits) |
 | **Auth** | Simple token (self-hosted) | No complex auth needed for personal use |
 | **Notifications** | Desktop: browser notifications / Telegram: Bot API |
 | **Deployment** | Local first → systemd + nginx on VPS (no Docker) |
+| **API style** | REST + polling | Frontend polls backend for updates. Simple, no WebSockets needed — AI chat, feeds, coach all work fine with this. |
 
 ### Deployment Path
-1. **Phase 1:** Run locally on personal laptop (development + daily use)
-2. **Later:** Deploy to Debian VPS with systemd services + nginx reverse proxy
+1. **Phase 1:** Run locally on personal laptop (development + daily use). Two dev servers: FastAPI on :8000, React on :3000 (with proxy).
+2. **Production (VPS):** `npm run build` → FastAPI serves the built React app as static files. Single process. Nginx in front, Cloudflare on top (caching, SSL, DDoS).
 3. **If needed:** Migrate DB to cloud service (Supabase/PlanetScale) if storage is tight
 
 ---
@@ -530,6 +534,12 @@ Agents are autonomous subprocesses for complex, multi-step tasks. Built progress
 | **Brain Map** | AI-generated connections (not manual graph building) |
 | **Backups** | Local exports first → cloud backup when on VPS |
 | **Database** | SQLite on VPS, migrate to cloud DB if storage becomes issue |
+| **ORM** | SQLAlchemy + Alembic migrations. Models as Python classes, no raw SQL day-to-day. |
+| **API Style** | REST + polling. No WebSockets — keeps it simple, works for all features. |
+| **State Management** | React Query (server data) + useState (UI). No Redux. |
+| **Command Palette Search** | Fuse.js client-side. Instant, offline-capable, scales fine for personal use. |
+| **Kanban DnD** | React Beautiful DnD. Smooth, battle-tested. |
+| **Dev Setup** | Monorepo, two dev servers. Production: FastAPI serves built frontend. Cloudflare in front of VPS. |
 
 ---
 
