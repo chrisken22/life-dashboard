@@ -72,7 +72,8 @@ These files must **never** be edited from web. They are the source of truth.
 - User works locally at home, uses web (claude.ai/code) at work
 - When changing sync behavior, update this file and `docs/sync-workflow.md`
 - **When updating any synced file**, add at the bottom: `Last updated: [DD/MM/YYYY HH:MM] from [local/web]`
-- **Web Claude:** Do NOT edit `docs/PROJECT_PLAN` directly. Put suggestions in `docs/web-updates.md`
+- **Web Claude:** Do NOT edit core documents (`CLAUDE.md`, `PROJECT_PLAN.md`, `sync-workflow.md`). Write suggestions into `docs/web_brainstorm.md`. If creating a new file, prefix it with `web_`.
+- **Session note:** `CLAUDE.md` is read at session start only. If it changes while a session is open (e.g. updated from web or another local edit), start a new session to pick up the changes.
 
 ---
-Last updated: 04/02/2026 01:00 from local
+Last updated: 04/02/2026 14:30 from local
