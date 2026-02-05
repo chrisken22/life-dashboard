@@ -69,10 +69,15 @@
 
 **UX Details:**
 5. **Submit feedback:** Simple animation in the input box (e.g., checkmark, brief color change)
-6. **Keyboard shortcut:** Yes - quick focus from anywhere in app
-7. **History view:** Yes - popup/panel showing recent brain dumps and where they went
+6. **Keyboard shortcut:** `Ctrl+Space` to focus from anywhere
+7. **History view:** Popup showing last 10 items, scrollable. Each entry shows: text, timestamp, category, edit button
 8. **AI uncertainty:** Ask user before saving ("Is this a task or a note?")
 9. **Voice mode:** Toggle (click to start, click to stop)
+
+**Input Details:**
+10. **Multi-line:** Yes - Shift+Enter for new line, Enter to submit. Supports longer writing sessions
+11. **Character limit:** None
+12. **Edit functionality:** Can change text and category after submission (from history view)
 
 ## Questions to Resolve
 
