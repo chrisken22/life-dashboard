@@ -99,16 +99,24 @@
 ### Phase 1: Foundation + Task Management (MVP)
 **Goal:** Working task manager with Kanban + simple todos - enough to use daily
 
+**Status:** In Progress (Kanban board complete, todos/dashboard/command palette remaining)
+
 **Features:**
-- [ ] Project setup (FastAPI backend, React frontend, SQLite)
+- [x] Project setup (FastAPI backend, React frontend, SQLite) ✅ *05/02/2026*
+- [x] **Dark theme** from day 1 ✅ *05/02/2026*
+- [x] Local development setup (runs on localhost) ✅ *05/02/2026*
+- [x] **Kanban board** for projects (multi-step work) ✅ *06/02/2026*
+  - [x] Columns: Backlog | In Progress | Done
+  - [x] Cards with: title, description, due date, priority, tags
+  - [x] Drag-and-drop between columns
+  - [x] Add new task (button in column headers)
+  - [x] Edit task (click on card)
+  - [x] Delete task (button on hover)
+  - [x] Refresh button to sync with backend
 - [ ] **Dashboard home view** - everything at a glance
   - Today's tasks widget
   - Quick add widget
   - Upcoming deadlines
-- [ ] **Kanban board** for projects (multi-step work)
-  - Columns: Backlog | In Progress | Done
-  - Cards with: title, description, due date, priority, tags
-  - Drag-and-drop between columns
 - [ ] **Simple todo lists** for quick tasks
   - Checkbox style
   - Group by category (categories emerge from usage)
@@ -126,9 +134,7 @@
   - History popup: last 10 entries, scrollable
   - No AI categorization yet (Phase 3 upgrade)
   - Edit text from history
-- [ ] **Dark theme** from day 1
 - [ ] **Privacy mode** - one-click hide personal content
-- [ ] Local development setup (runs on localhost)
 
 **Dashboard Layout (Hybrid Overview + Stream):**
 ```

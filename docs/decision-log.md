@@ -44,4 +44,20 @@
 
 ---
 
-Last updated: 05/02/2026 23:00 from local
+### 06/02/2026 — Kanban Board Implementation
+
+| Decision | Chose | Why not the alternatives |
+|----------|-------|--------------------------|
+| **Task CRUD UI** | Modal dialog for create/edit | Inline editing would be cleaner but harder to implement with all fields (title, description, tags, date, priority). Modal is familiar pattern and works on mobile. |
+| **Delete confirmation** | Browser confirm() dialog | Custom modal would look better but adds complexity. Browser confirm is instant, familiar, works everywhere. Can improve later if needed. |
+| **Drag feedback** | Blue ring + scale effect (from library) | Custom drag preview would allow more control but react-beautiful-dnd defaults are polished and familiar from other tools (Trello, etc.). |
+| **Date input** | HTML5 date picker | Could use a React date library (react-datepicker, etc.) but native is simpler, works on mobile, no extra bundle size. Converts `YYYY-MM-DD` to `YYYY-MM-DDTHH:MM:SS` for backend. |
+| **Refresh strategy** | Manual refresh button | Auto-polling every 30s would be smoother but adds server load and complexity. Manual gives user control. Can add polling later if multi-device use becomes common. |
+| **Empty column behavior** | Shows placeholder text | Could hide empty columns but that would be confusing when columns disappear/reappear. Always showing 3 columns (Backlog/In Progress/Done) provides stable layout. |
+| **Tags input** | Comma-separated text field | Tag picker UI would be nicer but requires storing all known tags, autocomplete logic, etc. Text field is simple and flexible. Users can type whatever they want. |
+| **Priority display** | Numeric input (0-5) | Could use visual indicators (stars, colors) but numbers are clearer and sortable. 0 = no priority, 5 = highest. Simple. |
+| **Color scheme** | twitterapi.io inspired (slate grays) | User preference after seeing initial dark theme. Darker blues/purples with good contrast. Gradient headers add visual interest without being distracting. |
+
+---
+
+Last updated: 06/02/2026 01:00 from local
