@@ -106,7 +106,7 @@
   - Quick add widget
   - Upcoming deadlines
 - [ ] **Kanban board** for projects (multi-step work)
-  - Columns: Backlog | Today | In Progress | Done
+  - Columns: Backlog | In Progress | Done
   - Cards with: title, description, due date, priority, tags
   - Drag-and-drop between columns
 - [ ] **Simple todo lists** for quick tasks
@@ -166,7 +166,7 @@ CREATE TABLE tasks (
     id INTEGER PRIMARY KEY,
     title TEXT NOT NULL,
     description TEXT,
-    status TEXT DEFAULT 'backlog',  -- backlog, today, in_progress, done
+    status TEXT DEFAULT 'backlog',  -- backlog, in_progress, done
     priority INTEGER DEFAULT 0,
     due_date DATETIME,
     tags TEXT,  -- JSON array
