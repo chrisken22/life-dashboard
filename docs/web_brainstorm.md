@@ -59,12 +59,16 @@
 
 ---
 
+## Decisions Made
+
+1. **Brain Dump placement:** Persistent input on main dashboard, central position
+2. **AI triage timing:** Immediate on submit, with option to review/correct. AI learns patterns over time
+3. **Voice recognition scope:** Brain dump input only (v1)
+4. **Privacy preference:** Browser-only (Web Speech API)
+
 ## Questions to Resolve
 
-1. **Brain Dump placement:** Should it be a persistent input on dashboard, or a modal/overlay triggered by shortcut?
-2. **AI triage timing:** Immediate (on submit) or batch (review queue)?
-3. **Voice recognition scope:** Start with brain dump only, or all text inputs?
-4. **Privacy preference:** Browser-only speech recognition, or option for cloud (better accuracy)?
+*(New questions as we refine)*
 
 ---
 
@@ -74,4 +78,4 @@
 
 ---
 
-Last updated: 05/02/2026 from web
+Last updated: 05/02/2026 from web (decisions added)
