@@ -20,4 +20,16 @@
 
 ---
 
-Last updated: 04/02/2026 22:30 from local
+## Archived 05/02/2026 (merged locally)
+
+### Brain Dump / Quick Capture Feature
+- Merged into: `PROJECT_PLAN.md → Phase 1`
+- Summary: Universal inbox on main dashboard. Phase 1: basic version (saves to DB, no AI). Ctrl+Space to focus. Multi-line input, history popup. AI categorization added in Phase 3.
+
+### Voice Recognition (for Brain Dump)
+- Merged into: `PROJECT_PLAN.md → Phase 6`
+- Summary: Toggle-based voice input using Web Speech API. Browser-local for privacy. Nice-to-have polish feature.
+
+---
+
+Last updated: 05/02/2026 23:00 from local
