@@ -231,6 +231,8 @@ CREATE TABLE note_links (
 ### Phase 3: AI Integration (Life Coach)
 **Goal:** AI-powered insights and coaching - the "killer feature"
 
+**Before starting Phase 3:** Review `docs/x_content_best_practices.md` sections on AI coaching, prompting, and memory architecture.
+
 **Features:**
 - [ ] **AI provider abstraction** (LiteLLM - switch between OpenAI/Claude)
 - [ ] **Chat interface** for AI conversations
@@ -543,7 +545,7 @@ Agents are autonomous subprocesses for complex, multi-step tasks. Built progress
 | Agent | Purpose | Build when |
 |-------|---------|------------|
 | `quick-scaffold` | Creates feature plans/skeleton files following established patterns | Now (learning) or after Phase 1 (actual scaffolding) |
-| `code-reviewer` | Reviews code, checks patterns, identifies skill candidates, updates docs | After Phase 1 |
+| `code-reviewer` | Reviews code, checks patterns, identifies skill candidates, updates docs. **Note:** Review `docs/x_content_best_practices.md` during this review. | After Phase 1 |
 | `dashboard-feature` | End-to-end feature creation: DB → API → widget → tests | After Phase 1 |
 | `feed-curator` | Manages content feeds: setup, review, tuning, debug | Phase 4 (when feeds exist) |
 
