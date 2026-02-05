@@ -74,6 +74,7 @@ These files must **never** be edited from web. They are the source of truth.
 - **When updating any synced file**, add at the bottom: `Last updated: [DD/MM/YYYY HH:MM] from [local/web]`
 - **Web Claude:** Do NOT edit core documents (`CLAUDE.md`, `PROJECT_PLAN.md`, `sync-workflow.md`). Write suggestions into `docs/web_brainstorm.md`. If creating a new file, prefix it with `web_`.
 - **Session note:** `CLAUDE.md` is read at session start only. If it changes while a session is open (e.g. updated from web or another local edit), start a new session to pick up the changes.
+- **Self-improvement:** After every correction, end with: "Update your CLAUDE.md so you don't make that mistake again." Claude is effective at writing rules for itself.
 
 ## Documentation Rules
 
@@ -92,4 +93,4 @@ When something happens during development, log it in the right place:
 - **Purpose:** Identify repeating patterns for skills, capture lessons learned, update docs
 
 ---
-Last updated: 04/02/2026 22:30 from local
+Last updated: 05/02/2026 22:00 from local
