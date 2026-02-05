@@ -118,6 +118,14 @@
   - Quick add task/todo/note
   - Navigate between views
   - Works in browser - no extension needed
+- [ ] **Brain Dump** - universal quick capture
+  - Prominent input on main dashboard: "What's on your mind?"
+  - Multi-line text (Shift+Enter for newline, Enter to submit)
+  - Focus shortcut: `Ctrl+Space` from anywhere
+  - Saves to `brain_dump` table with timestamp
+  - History popup: last 10 entries, scrollable
+  - No AI categorization yet (Phase 3 upgrade)
+  - Edit text from history
 - [ ] **Dark theme** from day 1
 - [ ] **Privacy mode** - one-click hide personal content
 - [ ] Local development setup (runs on localhost)
@@ -174,6 +182,14 @@ CREATE TABLE todos (
     completed BOOLEAN DEFAULT FALSE,
     category TEXT,
     created_at DATETIME
+);
+
+-- Brain Dump (universal quick capture)
+CREATE TABLE brain_dump (
+    id INTEGER PRIMARY KEY,
+    content TEXT NOT NULL,
+    created_at DATETIME,
+    edited_at DATETIME
 );
 ```
 
@@ -393,6 +409,11 @@ CREATE TABLE price_alerts (
   - Weekly summary: wins, misses, patterns
   - Monthly review: progress on goals, life area balance
   - Challenges assumptions: "You said X but did Y"
+- [ ] **Voice input for Brain Dump**
+  - Toggle button on Brain Dump input
+  - Web Speech API (browser-only, local processing for privacy)
+  - Real-time transcription feedback
+  - Click to start, click to stop
 - [ ] **Time tracking** (optional, for those who want it)
   - Website time tracking
   - Focus time stats
@@ -558,6 +579,9 @@ Agents are autonomous subprocesses for complex, multi-step tasks. Built progress
 | **Command Palette Search** | Fuse.js client-side. Instant, offline-capable, scales fine for personal use. |
 | **Kanban DnD** | React Beautiful DnD. Smooth, battle-tested. |
 | **Dev Setup** | Monorepo, two dev servers. Production: FastAPI serves built frontend. Cloudflare in front of VPS. |
+| **Brain Dump** | Phase 1 basic version (just saves to DB), Phase 3 adds AI categorization. Universal inbox for quick capture. |
+| **Voice Input** | Phase 6. Web Speech API for Brain Dump. Toggle-based, browser-local for privacy. Nice-to-have polish. |
+| **Shortcuts** | `Ctrl+K` (command palette), `Ctrl+Space` (brain dump focus). Different purposes, both needed. |
 
 ---
 

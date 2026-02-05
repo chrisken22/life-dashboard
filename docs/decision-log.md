@@ -32,4 +32,16 @@
 
 ---
 
-Last updated: 04/02/2026 22:40 from local
+### 05/02/2026 — Brain Dump & Voice Input
+
+| Decision | Chose | Why not the alternatives |
+|----------|-------|--------------------------|
+| **Brain Dump timing** | Phase 1 (basic), AI upgrade in Phase 3 | Could wait until Phase 3 for full AI experience, but having the input box early establishes the habit. The data collected becomes training material for Phase 3 AI categorization. |
+| **Brain Dump scope (Phase 1)** | Just saves to DB, no categories | Manual categories would add friction. Better to keep it pure "dump everything" and let AI sort it later. Less cognitive load. |
+| **Voice input timing** | Phase 6 (polish) | Could bundle with Brain Dump in Phase 1, but it's a nice-to-have. Core experience works fine with keyboard. Voice is enhancement, not requirement. |
+| **Voice tech** | Web Speech API (browser-local) | Cloud speech APIs (Google/Azure) would be more accurate but add cost, latency, and privacy concerns. Browser API is free, instant, private. Good enough for personal use. |
+| **Shortcuts** | Both `Ctrl+K` and `Ctrl+Space` | Could use only `Ctrl+K` for everything, but Brain Dump and Command Palette serve different mental modes. Brain Dump is "capture thought", Command Palette is "find/do thing". Separate shortcuts match separate intents. |
+
+---
+
+Last updated: 05/02/2026 23:00 from local
