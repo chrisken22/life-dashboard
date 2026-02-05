@@ -61,14 +61,22 @@
 
 ## Decisions Made
 
+**Core:**
 1. **Brain Dump placement:** Persistent input on main dashboard, central position
 2. **AI triage timing:** Immediate on submit, with option to review/correct. AI learns patterns over time
 3. **Voice recognition scope:** Brain dump input only (v1)
 4. **Privacy preference:** Browser-only (Web Speech API)
 
+**UX Details:**
+5. **Submit feedback:** Simple animation in the input box (e.g., checkmark, brief color change)
+6. **Keyboard shortcut:** Yes - quick focus from anywhere in app
+7. **History view:** Yes - popup/panel showing recent brain dumps and where they went
+8. **AI uncertainty:** Ask user before saving ("Is this a task or a note?")
+9. **Voice mode:** Toggle (click to start, click to stop)
+
 ## Questions to Resolve
 
-*(New questions as we refine)*
+*(Add new questions here)*
 
 ---
 
