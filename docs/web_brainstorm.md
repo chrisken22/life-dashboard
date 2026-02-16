@@ -45,14 +45,27 @@
 
 ## Questions to Resolve
 
-*(Open questions that need answers before merging)*
+- **Brain Dump staging:** How much review friction is right at the start? Should ALL dumps require categorization, or only ones AI can't auto-categorize?
+- **Brainstorming Whiteboard:** Which phase? Feels like it could be Phase 2 (knowledge base) or Phase 3 (AI-enhanced). Visual component adds complexity.
+- **Vision Board:** Format — images, text, mixed? Integration with goals/life areas?
+- **Predefined prompts:** Should users be able to create custom prompts from day 1, or start with a fixed set?
 
 ---
 
 ## Ready to Merge
 
-*(Refined ideas ready for PROJECT_PLAN - with suggested phase/section)*
+### ✅ Remove Voice Input from Phase 6
+- **Action:** Delete Voice Input feature from Phase 6. Replace with note: "User uses Wispr Flow for dictation."
+- **Sections to update:** Phase 6 features, Decisions Made table
 
 ---
 
-Last updated: 05/02/2026 23:00 from local
+## Key Insight from User
+
+> "This Brain Dump is the most interesting feature and at the same time quite difficult to make right. This is the **entry point to Compass from my brain**."
+
+The Brain Dump isn't just a text box — it's the primary interface between the user's thoughts and the entire system. Getting this right is critical. The staging/categorization system turns raw thoughts into structured, actionable data across all of Compass.
+
+---
+
+Last updated: 16/02/2026 from web
